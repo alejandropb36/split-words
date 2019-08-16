@@ -31,8 +31,7 @@ namespace split_words
 
                 foreach(string word in words)
                 {
-                    int row = dataGridViewWords.Rows.Add();
-                    dataGridViewWords.Rows[row].Cells[0].Value = word;
+                    dataGridViewWords.Rows.Add(word);
                 }
             }
         }
