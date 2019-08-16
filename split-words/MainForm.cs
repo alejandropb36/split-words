@@ -16,5 +16,29 @@ namespace split_words
         {
             InitializeComponent();
         }
+
+        private void buttonSplitWords_Click(object sender, EventArgs e)
+        {
+            string[] words;
+            string textContent1;
+
+            if(textBoxContent1.Text != "")
+            {
+                textContent1 = textBoxContent1.Text;
+                Console.WriteLine(textBoxContent1.Text);
+                words = textContent1.Split(' ');
+
+                textBoxContent2.Text = textContent1;
+
+                dataGridViewWords.Rows.Clear();
+
+                foreach(string word in words)
+                {
+                    int row = dataGridViewWords.Rows.Add();
+                    dataGridViewWords.Rows[row].Cells[0].Value = word;
+                }
+
+            }
+        }
     }
 }

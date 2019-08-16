@@ -32,6 +32,7 @@
             this.buttonSplitWords = new System.Windows.Forms.Button();
             this.textBoxContent2 = new System.Windows.Forms.TextBox();
             this.dataGridViewWords = new System.Windows.Forms.DataGridView();
+            this.Words = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWords)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +54,7 @@
             this.buttonSplitWords.TabIndex = 1;
             this.buttonSplitWords.Text = "Split Words";
             this.buttonSplitWords.UseVisualStyleBackColor = true;
+            this.buttonSplitWords.Click += new System.EventHandler(this.buttonSplitWords_Click);
             // 
             // textBoxContent2
             // 
@@ -66,10 +68,18 @@
             // dataGridViewWords
             // 
             this.dataGridViewWords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewWords.Location = new System.Drawing.Point(196, 131);
+            this.dataGridViewWords.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Words});
+            this.dataGridViewWords.Location = new System.Drawing.Point(202, 131);
             this.dataGridViewWords.Name = "dataGridViewWords";
-            this.dataGridViewWords.Size = new System.Drawing.Size(240, 236);
+            this.dataGridViewWords.Size = new System.Drawing.Size(243, 236);
             this.dataGridViewWords.TabIndex = 3;
+            // 
+            // Words
+            // 
+            this.Words.HeaderText = "Words";
+            this.Words.Name = "Words";
+            this.Words.Width = 200;
             // 
             // MainForm
             // 
@@ -95,6 +105,7 @@
         private System.Windows.Forms.Button buttonSplitWords;
         private System.Windows.Forms.TextBox textBoxContent2;
         private System.Windows.Forms.DataGridView dataGridViewWords;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Words;
     }
 }
 
