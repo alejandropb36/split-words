@@ -33,6 +33,7 @@
             this.textBoxContent2 = new System.Windows.Forms.TextBox();
             this.dataGridViewWords = new System.Windows.Forms.DataGridView();
             this.Words = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWords)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             // 
             // buttonSplitWords
             // 
-            this.buttonSplitWords.Location = new System.Drawing.Point(280, 54);
+            this.buttonSplitWords.Location = new System.Drawing.Point(280, 79);
             this.buttonSplitWords.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSplitWords.Name = "buttonSplitWords";
             this.buttonSplitWords.Size = new System.Drawing.Size(73, 23);
@@ -81,11 +82,23 @@
             this.Words.Name = "Words";
             this.Words.Width = 200;
             // 
+            // buttonClear
+            // 
+            this.buttonClear.Location = new System.Drawing.Point(280, 32);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(73, 23);
+            this.buttonClear.TabIndex = 4;
+            this.buttonClear.Text = "Clear all";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(637, 379);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.dataGridViewWords);
             this.Controls.Add(this.textBoxContent2);
             this.Controls.Add(this.buttonSplitWords);
@@ -106,6 +119,7 @@
         private System.Windows.Forms.TextBox textBoxContent2;
         private System.Windows.Forms.DataGridView dataGridViewWords;
         private System.Windows.Forms.DataGridViewTextBoxColumn Words;
+        private System.Windows.Forms.Button buttonClear;
     }
 }
 

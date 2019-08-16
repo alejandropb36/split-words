@@ -25,11 +25,8 @@ namespace split_words
             if(textBoxContent1.Text != "")
             {
                 textContent1 = textBoxContent1.Text;
-                Console.WriteLine(textBoxContent1.Text);
                 words = textContent1.Split(' ');
-
                 textBoxContent2.Text = textContent1;
-
                 dataGridViewWords.Rows.Clear();
 
                 foreach(string word in words)
@@ -37,8 +34,14 @@ namespace split_words
                     int row = dataGridViewWords.Rows.Add();
                     dataGridViewWords.Rows[row].Cells[0].Value = word;
                 }
-
             }
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxContent1.Clear();
+            textBoxContent2.Clear();
+            dataGridViewWords.Rows.Clear();
         }
     }
 }
