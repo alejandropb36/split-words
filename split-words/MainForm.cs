@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace split_words
 {
@@ -21,11 +22,13 @@ namespace split_words
         {
             string[] words;
             string textContent1;
+            string pattern = @"\s+";
 
             if(textBoxContent1.Text != "")
             {
                 textContent1 = textBoxContent1.Text;
-                words = textContent1.Split(' ');
+                
+                words = Regex.Split(textContent1, pattern);
                 textBoxContent2.Text = textContent1;
                 dataGridViewWords.Rows.Clear();
 
